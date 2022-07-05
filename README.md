@@ -137,3 +137,19 @@ python src/ogbn-proteins/teacher_train.py --lbd_pred 0.1 --lbd_embd 0.01 --hidde
 
 ### Reference Implementation
 Codes are written based on [deeperGCN](https://github.com/lightaime/deep_gcns_torch) and pytorch-geometric (https://github.com/rusty1s/pytorch_geometric).
+
+
+## Reference
+If you use this code, please cite the following paper.
+```shell
+@article{10.1371/journal.pone.0256187,
+    author = {Kim, Junghun AND Jung, Jinhong AND Kang, U.},
+    journal = {PLOS ONE},
+    publisher = {Public Library of Science},
+    title = {Compressing deep graph convolution network with multi-staged knowledge distillation},
+    year = {2021},
+    month = {08},
+    volume = {16},
+    pages = {1-18}
+}
+```
