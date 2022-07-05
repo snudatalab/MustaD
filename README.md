@@ -143,10 +143,10 @@ Codes are written based on [deeperGCN](https://github.com/lightaime/deep_gcns_to
 If you use this code, please cite the following paper.
 ```shell
 @article{10.1371/journal.pone.0256187,
-    author = {Kim, Junghun AND Jung, Jinhong AND Kang, U.},
+    author = {Kim, Junghun and Jung, Jinhong and Kang, U.},
     journal = {PLOS ONE},
     publisher = {Public Library of Science},
-    title = {Compressing deep graph convolution network with multi-staged knowledge distillation},
+    title = {Compressing Deep Graph Convolution Network with Multi-Staged Knowledge Distillation},
     year = {2021},
     month = {08},
     volume = {16},
