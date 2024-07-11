@@ -5,8 +5,8 @@ Given a trained deep graph convolution network (GCN), how can we effectively com
 
 ## Overview
 ![overview](./src/framework.jpg)
-1. **Preserving Multi-hop Feature Aggregation**: MuSK preserves the feature aggregation procedure of deep GCN layers of the teacher in a single effective GCN layer of a student.
-2. **Distilling Knowledge from Trained Deep GCNs**: MuSK distills the last hidden embeddings after K-hop aggregations of the teacher into the student. This distillation guides the student to follow the teacher’s behavior more carefully.
+1. **Preserving Multi-hop Feature Aggregation**: MustaD preserves the feature aggregation procedure of deep GCN layers of the teacher in a single effective GCN layer of a student.
+2. **Distilling Knowledge from Trained Deep GCNs**: MustaD distills the last hidden embeddings after K-hop aggregations of the teacher into the student. This distillation guides the student to follow the teacher’s behavior more carefully.
 3. **Distilling Knowledge of Predictions**: The distillation of task prediction guides the student to obtain similar predictive outputs as the teacher.
 
 ## Code Description
@@ -44,7 +44,7 @@ Given a trained deep graph convolution network (GCN), how can we effectively com
 
 ### Simple Demo
 You can run the demo sript in the citation dataset by `bash citation.sh`.
-It trains MuSK on Cora, Citeseer, and Pubmed.
+It trains MustaD on Cora, Citeseer, and Pubmed.
 This demo loads a pre-trained teacher model from `src/citation/teacher/teacher_{DATASET}{#LAYERS}.pth` and saves the trained student model at `src/citation/student/student_{DATASET}{#LAYERS}.pth`.
 Then, it evaluates the trained model in terms of accuracy. 
 - `{DATASET}`: cora, citeseer, pubmed.
@@ -60,7 +60,7 @@ Then, it evaluates the trained model in terms of accuracy.
 #### Used Hyperparameters 
 We briefly summarize the hyperparameters.
 
-* Hyperparameters of MuSK
+* Hyperparameters of MustaD
     - `data`: name of the dataset.
     - `layer`: number of layers in the teacher.
     - `test`: evaluation on test dataset.
@@ -103,7 +103,7 @@ Codes are written based on [GCNII](https://github.com/chennnM/GCNII).
 
 ### Simple Demo
 You can run the demo sript in ogbn-proteins by `bash ogbn-proteins.sh`.
-It trains MuSK on ogbn-proteins.
+It trains MustaD on ogbn-proteins.
 This demo loads a pre-trained teacher model from `src/ogbn-proteins/teacher/teacher_ogbn{#LAYERS}.pth` and saves the trained student model at `./src/ogbn-proteins/student/student_ogbn{#LAYERS}.pth`.
 Then, it evaluates the trained model in terms of ROC-AUC. 
 - `{#LAYERS}`: The number of layers in the teacher model.
@@ -116,7 +116,7 @@ Then, it evaluates the trained model in terms of ROC-AUC.
 #### Used Hyperparameters 
 We briefly summarize the hyperparameters.
 
-* Hyperparameters of MuSK
+* Hyperparameters of MustaD
     - `layer`: number of layers in the teacher.
     - `hidden`: student's hidden feature dimension.
     - `lbd_pred`: lambda for the prediction loss.
