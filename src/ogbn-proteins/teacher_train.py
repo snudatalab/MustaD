@@ -1,3 +1,15 @@
+"""
+Compressing Deep Graph Convolution Network with Multi-Staged Knowledge Distillation (PLOS ONE 2021)
+
+Authors:
+- Junghun Kim (bandalg97@snu.ac.kr), Seoul National University
+- Jinhong Jung (jinhongjung@jbnu.ac.kr), Jeonbuk National University
+- U Kang (ukang@snu.ac.kr), Seoul National University
+
+teacher_train.py
+    - codes for training the teacher model
+"""
+
 import torch
 import copy
 from tqdm import tqdm
